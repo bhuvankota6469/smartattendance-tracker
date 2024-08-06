@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Attendance Tracker</h1>
+    </header>
+    <main>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Facial Recognition</li>
+                <li>GPS Location Tracking</li>
+                <li>QR Code Scanning</li>
+                <li>Biometric Verification</li>
+                <li>User-Friendly Interface</li>
+                <li>Notifications and Alerts</li>
+                <li>Automated Reports and Analytics</li>
+            </ul>
+        </section>
+        <section id="facial-recognition">
+            <h2>Facial Recognition</h2>
+            <video id="video" width="720" height="560" autoplay></video>
+            <button id="capture">Capture</button>
+        </section>
+        <section id="qr-code">
+            <h2>QR Code Scanning</h2>
+            <video id="qr-video" width="320" height="240" autoplay></video>
+        </section>
+        <section id="biometric-verification">
+            <h2>Biometric Verification</h2>
+            <button id="biometric-button">Verify Biometric</button>
+        </section>
+        <section id="reports">
+            <h2>Automated Reports and Analytics</h2>
+            <button id="generate-report">Generate Report</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Smart Attendance Tracker</p>
+    </footer>
+    
+    <!-- Modal Structure -->
+    <div id="biometric-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Biometric Verification</h2>
+            <p>Please scan your fingerprint.</p>
+            <!-- Biometric scanning simulation -->
+            <button id="scan-fingerprint">Scan Fingerprint</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
