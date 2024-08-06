@@ -5,24 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Attendance Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Smart Attendance Tracker</h1>
+        <!-- Add the image here -->
+        <img src="https://i.ytimg.com/vi/4jDOVqfKaKs/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLD98AjQvJXImKiUG3ucK7wEp51kcw" alt="Attendance Tracker" class="header-image">
     </header>
     <main>
-        <section id="features">
-            <h2>Features</h2>
-            <ul>
-                <li>Facial Recognition</li>
-                <li>GPS Location Tracking</li>
-                <li>QR Code Scanning</li>
-                <li>Biometric Verification</li>
-                <li>User-Friendly Interface</li>
-                <li>Notifications and Alerts</li>
-                <li>Automated Reports and Analytics</li>
-            </ul>
-        </section>
         <section id="facial-recognition">
             <h2>Facial Recognition</h2>
             <video id="video" width="720" height="560" autoplay></video>
@@ -30,11 +22,37 @@
         </section>
         <section id="qr-code">
             <h2>QR Code Scanning</h2>
-            <video id="qr-video" width="320" height="240" autoplay></video>
+            <div id="qr-buttons">
+                <button class="semester-button" data-semester="1">Semester-1</button>
+                <button class="semester-button" data-semester="2">Semester-2</button>
+                <button class="semester-button" data-semester="3">Semester-3</button>
+                <button class="semester-button" data-semester="4">Semester-4</button>
+                <button class="semester-button" data-semester="5">Semester-5</button>
+                <button class="semester-button" data-semester="6">Semester-6</button>
+                <button class="semester-button" data-semester="7">Semester-7</button>
+                <button class="semester-button" data-semester="8">Semester-8</button>
+            </div>
+            <canvas id="qr-canvas" style="margin-top: 20px;"></canvas>
         </section>
         <section id="biometric-verification">
             <h2>Biometric Verification</h2>
             <button id="biometric-button">Verify Biometric</button>
+        </section>
+        <section id="maps">
+            <h2>Location</h2>
+            <p>
+                <a href="https://www.google.com/maps/place/Institute+of+Aeronautical+Engineering/@17.5853,78.1234,17z/" target="_blank">
+                    View Institute of Aeronautical Engineering on Google Maps
+                </a>
+            </p>
+        </section>
+        <section id="attendance-chart">
+            <h2>Attendance Chart</h2>
+            <canvas id="attendance-pie-chart"></canvas>
+        </section>
+        <section id="biometric-chart">
+            <h2>Biometric Chart</h2>
+            <canvas id="biometric-bar-chart"></canvas>
         </section>
         <section id="reports">
             <h2>Automated Reports and Analytics</h2>
